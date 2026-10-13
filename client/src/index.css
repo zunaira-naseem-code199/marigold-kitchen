@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream font-sans text-charcoal antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display text-maroon;
+  }
+  :focus-visible {
+    @apply outline outline-2 outline-offset-2 outline-maroon;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    * {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex min-h-[44px] items-center justify-center rounded px-6 py-2.5 text-sm font-semibold tracking-wide transition-colors duration-150 focus-visible:outline-offset-4 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply btn bg-marigold text-maroon-dark hover:bg-marigold-deep;
+  }
+  .btn-secondary {
+    @apply btn border-2 border-maroon text-maroon hover:bg-maroon hover:text-cream;
+  }
+  .btn-light {
+    @apply btn border-2 border-cream/80 text-cream hover:bg-cream hover:text-maroon;
+  }
+  .btn-maroon {
+    @apply btn bg-maroon text-cream hover:bg-maroon-light;
+  }
+  .field {
+    @apply w-full rounded border border-charcoal/40 bg-white px-4 py-3 text-base text-charcoal placeholder:text-charcoal/50 focus:border-maroon focus:ring-2 focus:ring-maroon/30;
+  }
+  .label {
+    @apply mb-1.5 block text-sm font-semibold text-charcoal;
+  }
+  .error-text {
+    @apply mt-1 text-sm font-medium text-red-700;
+  }
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.18em] text-maroon;
+  }
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+}
