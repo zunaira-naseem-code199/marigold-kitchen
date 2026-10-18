@@ -7,6 +7,14 @@ This is a sample project. "Marigold Kitchen" is a fictional restaurant in Leeds,
 
 ---
 
+## Live Demo
+
+- **Website (frontend):** https://marigold-kitchen-beige.vercel.app
+- **API (backend):** https://marigold-kitchen-production.up.railway.app
+- **API health check:** https://marigold-kitchen-production.up.railway.app/api/health
+
+---
+
 ## Contents
 
 1. [What the site does](#1-what-the-site-does)
